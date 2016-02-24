@@ -1,26 +1,30 @@
 {
-  "name": "your-component-name",
-  "version": "0.4.0",
-  "exportName": "YourExportedComponentName",
-  "main": "bin/your-component-name.js",
-  "description": "Your component description",
-  "repository": {
-    "type": "git",
-    "url": "git@github.rtp.raleigh.ibm.com:people-insights-commons/nodejs-demo-component.git"
-  },
-  "author": "Ary Pablo Batista <batarypa@ar.ibm.com>",
-  "license": "Apache License Version 2.0",
-  "keywords": [
-    "people",
-    "insights",
-    "base",
-    "nodejs",
-    "demo",
-    "component"
-  ],
+  "name": "personality-insights-input",
+  "version": "1.0.0",
+  "description": "Generate valid input for Personality Insights service.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ibm-silvergate/personality-insights-input.git"
+  },
+  "keywords": [
+    "personality",
+    "insights",
+    "personality",
+    "input",
+    "content",
+    "items",
+    "text"
+  ],
+  "author": "Ary Pablo Batista <arypbatista@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ibm-silvergate/personality-insights-input/issues"
+  },
+  "homepage": "https://github.com/ibm-silvergate/personality-insights-input#readme",
   "dependencies": {
   },
   "devDependencies": {
@@ -50,6 +54,5 @@
     "optional": "~0.1.3",
     "run-sequence": "^1.1.5",
     "through2": "~2.0.0"
-  },
-  "private": true
+  }
 }

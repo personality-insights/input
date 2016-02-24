@@ -1,3 +1,5 @@
 # Override Gulp configuration
 
-module.exports = {}
+module.exports =
+  compilation:
+    standalone : false
