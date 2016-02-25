@@ -21,8 +21,6 @@ tweetParentId = (tweet) ->
   else if tweet.retweeted and tweet.current_user_retweet?
     tweet.current_user_retweet.id_str
 
-
-
 fromTweet = (tweet) ->
   id: tweet.id_str
   userid: tweet.user.id_str
@@ -35,9 +33,23 @@ fromTweet = (tweet) ->
   reply: tweet.in_reply_to_screen_name?
   parentid: tweetParentId tweet
 
-fromTweets = (tweets) -> contentItems : tweets.map fromTweet
+fromTweets = (tweets) -> contentItems (tweets.map fromTweet)
+
+contentItems = (items) -> contentItems : items
+
+fromText = (metadata, text, id) ->
+  id: id
+  userid: metadata.userid
+  sourceid: metadata.sourceid || 'generic'
+  language: metadata.language
+  contenttype: 'text/plain'
+  content: text
+  created: metadata.created
+
+fromTexts = (texts, metadata={}) -> contentItems (texts.map (fromText.bind undefined, metadata))
 
 
 # Public API Methods
 module.exports =
-  fromTweets: fromTweets
+  fromTweets : fromTweets
+  fromTexts  : fromTexts

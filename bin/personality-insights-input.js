@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-var fromTweet, fromTweets, tweetParentId;
+var contentItems, fromText, fromTexts, fromTweet, fromTweets, tweetParentId;
 
 tweetParentId = function(tweet) {
   if (tweet.in_reply_to_screen_name != null) {
@@ -40,11 +40,35 @@ fromTweet = function(tweet) {
 };
 
 fromTweets = function(tweets) {
+  return contentItems(tweets.map(fromTweet));
+};
+
+contentItems = function(items) {
   return {
-    contentItems: tweets.map(fromTweet)
+    contentItems: items
   };
 };
 
+fromText = function(metadata, text, id) {
+  return {
+    id: id,
+    userid: metadata.userid,
+    sourceid: metadata.sourceid || 'generic',
+    language: metadata.language,
+    contenttype: 'text/plain',
+    content: text,
+    created: metadata.created
+  };
+};
+
+fromTexts = function(texts, metadata) {
+  if (metadata == null) {
+    metadata = {};
+  }
+  return contentItems(texts.map(fromText.bind(void 0, metadata)));
+};
+
 module.exports = {
-  fromTweets: fromTweets
+  fromTweets: fromTweets,
+  fromTexts: fromTexts
 };
