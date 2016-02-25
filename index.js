@@ -13,14 +13,5 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-var
-  texts = require('./data/texts'),
-  PIInput = require('../index.js'),
-  metadata = {
-    userid: 'author1',
-    language: 'en'
-  };
-
-console.log('Generated input:');
-console.log(JSON.stringify(PIInput.fromTexts(texts, metadata)).slice(0, 300) + '...');
+ 
+module.exports = require('./bin/personality-insights-input.js');

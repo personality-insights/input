@@ -16,7 +16,7 @@
 
 var
   tweets = require('./data/tweets'),
-  PIInput = require('../bin/personality-insights-input.js');
+  PIInput = require('../index.js');
 
 console.log('Generated input:');
 console.log(JSON.stringify(PIInput.fromTweets(tweets)).slice(0, 300) + '...');
