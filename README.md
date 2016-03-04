@@ -1,5 +1,10 @@
 # Personality Insights Input
----
+
+![last-release](https://img.shields.io/github/tag/ibm-silvergate/personality-insights-input.svg)
+[![npm-version](https://img.shields.io/npm/v/personality-insights-input.svg)](https://www.npmjs.com/package/personality-insights-input)
+[![npm-license](https://img.shields.io/npm/l/personality-insights-input.svg)](https://www.npmjs.com/package/personality-insights-input)
+[![npm-downloads](https://img.shields.io/npm/dm/personality-insights-input.svg)](https://www.npmjs.com/package/personality-insights-input)
+
 Generate valid IBM Watson Personality Insights service input from different sources.
 
 Supported sources (will add more as requested):
@@ -7,7 +12,7 @@ Supported sources (will add more as requested):
   - List of texts
 
 ## Getting Started
----
+
 Just **require** the package and call the API with your data:
 ```
 var
@@ -24,7 +29,7 @@ See the complete [example code for texts][example_code_for_texts] or the [exampl
 
 
 ## API Methods
----
+
 Public methods:
 * `fromTweets :: ([Tweet]) -> ContentItems` - Transforms tweets into content items.
 * `fromTexts :: ([String], Metadata) -> ContentItems` - Transforms texts into content items. `Metadata` parameter is optional.
@@ -42,7 +47,7 @@ Metadata {
 }
 
 ## Build from source
----
+
 You can run `gulp` command to build the component. Binaries will be deployed to `bin` folder.
 
 [pi_doc]: https://watson-api-explorer.mybluemix.net/apis/personality-insights-v2#!/personality-insights/profile
