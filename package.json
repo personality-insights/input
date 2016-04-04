@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ibm-silvergate/personality-insights-input.git"
+    "url": "git@github.com:personality-insights/input.git"
   },
   "keywords": [
     "personality",
