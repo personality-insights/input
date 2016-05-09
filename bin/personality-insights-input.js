@@ -29,7 +29,7 @@ fromTweet = function(tweet) {
     id: tweet.id_str,
     userid: tweet.user.id_str,
     sourceid: 'twitter',
-    language: tweet.lang,
+    language: tweet.language,
     contenttype: 'text/plain',
     content: tweet.text.replace('[^(\\x20-\\x7F)]*', ''),
     created: Date.parse(tweet.created_at),
