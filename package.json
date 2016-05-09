@@ -1,6 +1,6 @@
 {
   "name": "personality-insights-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate valid input for Personality Insights service.",
   "main": "index.js",
   "scripts": {
