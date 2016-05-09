@@ -1,6 +1,6 @@
 # Personality Insights Input
 
-![last-release](https://img.shields.io/github/tag/ibm-silvergate/personality-insights-input.svg)
+![last-release](https://img.shields.io/github/tag/personality-insights/input.svg)
 [![npm-version](https://img.shields.io/npm/v/personality-insights-input.svg)](https://www.npmjs.com/package/personality-insights-input)
 [![npm-license](https://img.shields.io/npm/l/personality-insights-input.svg)](https://www.npmjs.com/package/personality-insights-input)
 [![npm-downloads](https://img.shields.io/npm/dm/personality-insights-input.svg)](https://www.npmjs.com/package/personality-insights-input)
